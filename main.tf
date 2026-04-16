@@ -38,3 +38,13 @@ module "mssql_server" {
   sql_server_name    = "sqlsrv-user3"
   sql_server_version = "12.0"
 }
+
+module "application_insights" {
+  source                    = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=application_insights/v1.0.0"
+  application_insights_name = "ai-user3"
+  log_analytics_name        = "la-user3"
+  resource_group = {
+    name     = "rg-user3"
+    location = "northeurope"
+  }
+}
