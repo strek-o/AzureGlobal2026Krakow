@@ -7,7 +7,7 @@ COPY /src/RazorPagesMovie.csproj .
 RUN dotnet restore
 
 # Copy everything else and build
-COPY /src .
+COPY . .
 RUN dotnet build -c Release -o /app/build
 
 # Publish stage
