@@ -48,3 +48,26 @@ module "application_insights" {
     location = "northeurope"
   }
 }
+
+# module "service_plan" {
+#   source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=service_plan/v2.0.0"
+#   app_service_plan_name = "asp-user3"
+#   resource_group = {
+#     name     = "rg-user3"
+#     location = "northeurope"
+#   }
+#   sku_name = "P1v2"
+#   tags = {
+#     owner = "user3"
+#   }
+# }
+
+# module "app_service" {
+#   source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=app_service/v1.0.0"
+#   app_service_name = "as-user3"
+#   app_service_plan_id 
+#   app_settings
+#   identity_client_id
+#   identity_id
+#   resource_group
+# }
