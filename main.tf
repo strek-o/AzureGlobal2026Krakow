@@ -85,8 +85,8 @@ module "app_service" {
 }
 
 module "container_registry" {
-  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=container_registry/v1.0.0"
-  name   = "CR2User3"
+  source                  = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=container_registry/v1.0.0"
+  container_registry_name = "CR2User3"
   resource_group = {
     name     = "rg-user3"
     location = "northeurope"
