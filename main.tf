@@ -26,6 +26,11 @@ module "keyvault" {
   resource_group = {
     name = "rg-user3"
   location = "northeurope" }
+  # secrets = {
+  #   "ConnectionString": "movedToAKV"
+  #   "RazorPagesMovieContext": "movedToAKV"
+  #   "SecretKey": "movedToAKV"
+  # }
 }
 
 module "mssql_server" {
