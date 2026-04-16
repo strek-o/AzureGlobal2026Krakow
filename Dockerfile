@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy csproj and restore dependencies
-COPY /src/RazorPagesMovie.csproj .
+COPY RazorPagesMovie.csproj .
 RUN dotnet restore
 
 # Copy everything else and build
