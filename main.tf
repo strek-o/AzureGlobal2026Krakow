@@ -23,12 +23,12 @@ module "keyvault" {
   source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=keyvault/v1.0.0"
   keyvault_name = "kv-user3"
   network_acls = {}
-  resource_group = "rg-user3"
+  resource_group = {"name" = "rg-user3"}
 }
 
 module "mssql_server" {
   source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=mssql_server/v1.0.0"
-  resource_group = "rg-user3"
+  resource_group = {"name" = "rg-user3"}
   sql_server_admin = "user3"
   sql_server_name = "sqlsrv-user3"
   sql_server_version = "12.0"
