@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=4.1.0"
+      version = "=4.3.0"
     }
   }
 }
@@ -22,7 +22,7 @@ terraform {
 module "keyvault" {
   source        = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=keyvault/v1.0.0"
   keyvault_name = "kv-user3"
-  network_acls  = {}
+  network_acls  = { bypass = "AzureServices" }
   resource_group = {
     name = "rg-user3"
   location = "northeurope" }
